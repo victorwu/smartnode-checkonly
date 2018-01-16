@@ -1,5 +1,6 @@
 # SmartNode
 ### Bash installer for smartnode on Ubuntu 17.10 x64
+### ATTENTION: This installer is only suitable for dedicated servers. The anti-ddos script in this installer will disable all ports including the http, https and dns ports.
 
 #### Login to your vps, donwload the install.sh file and then run it:
 ```
