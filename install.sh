@@ -72,7 +72,7 @@ wget https://raw.githubusercontent.com/msg768/smartnode/master/upgrade.sh
 chmod 0700 ./makerun.sh
 
 # Create a cronjob for making sure smartcashd is always up-to-date
-(crontab -l ; echo "*/1440 * * * * ~/smartnode/upgrade.sh") | crontab -
+(crontab -l ; echo "*/120 * * * * ~/smartnode/upgrade.sh") | crontab -
 chmod 0700 ./upgrade.sh
 
 # Change the SSH port
