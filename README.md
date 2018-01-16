@@ -7,3 +7,5 @@
 wget https://raw.githubusercontent.com/msg768/smartnode/master/install.sh
 bash ./install.sh
 ```
+
+#### BEE $SMART!
