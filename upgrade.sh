@@ -2,7 +2,7 @@
 # upgrade.sh
 # Make sure smartcash is up-to-date
 # Add the following to the crontab (i.e. crontab -e)
-# */1440 * * * * ~/smartnode/upgrade.sh
+# */120 * * * * ~/smartnode/upgrade.sh
 
 if apt list --upgradable | grep -v grep | grep smartcash > /dev/null
 then
