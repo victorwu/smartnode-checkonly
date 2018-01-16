@@ -13,6 +13,6 @@ bash ./install.sh
 node-alias vps-ip-address:9678	node-privatekey collateral-txid collateral-vout
 ```
 
-#### Run the qt wallet, go to SmartNodes tab, choose your node and click "start alias"
+#### Run the qt wallet, go to SmartNodes tab, choose your node and click "start alias" at the bottom.
 
 #### You're good to go now. BEE $SMART!
