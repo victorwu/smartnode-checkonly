@@ -17,13 +17,12 @@ read _rpcUserName
 printf "RPC Password: "
 read _rpcPassword
 
-# The IP address of your vps which will be hosting the smartnode
-printf "VPS IP Address: "
-read _nodeIpAddress
-
 # Get a new privatekey by going to console >> debug and typing smartnode genkey
 printf "SmartNode PrivateKey: "
 read _nodePrivateKey
+
+# Get the IP address of your vps which will be hosting the smartnode
+_nodeIpAddress=$(hostname  -I | cut -f1 -d' ')
 
 # Make a new directory for smartcash daemon
 rm -r ~/smartcash/
