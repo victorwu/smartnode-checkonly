@@ -3,9 +3,9 @@
 ### ATTENTION: This installer is only suitable for a dedicated vps. The anti-ddos script in this installer will disable all ports including the http, https and dns ports. It will only leave the smartnode port open as well as a custom port for SSH.
 
 #### This shell script comes with 3 cronjobs: 
-1. Make sure the daemon is always running: makerun.sh
-2. Make sure the daemon is never stuck: checkdaemon.sh
-3. Make sure smartcash is always up-to-date: upgrade.sh
+1. Make sure the daemon is always running: **makerun.sh**
+2. Make sure the daemon is never stuck: **checkdaemon.sh**
+3. Make sure smartcash is always up-to-date: **upgrade.sh**
 
 #### Login to your vps, donwload the install.sh file and then run it:
 ```
