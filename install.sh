@@ -74,7 +74,7 @@ wget https://raw.githubusercontent.com/msg768/smartnode/master/upgrade.sh
 (crontab -l ; echo "*/1 * * * * ~/smartnode/makerun.sh") | crontab -
 chmod 0700 ./makerun.sh
 
-# Create a cronjob for making sure the daemon is not stuck
+# Create a cronjob for making sure the daemon is never stuck
 (crontab -l ; echo "*/30 * * * * ~/smartnode/checkdaemon.sh") | crontab -
 chmod 0700 ./checkdaemon.sh
 
