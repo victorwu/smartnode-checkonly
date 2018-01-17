@@ -9,17 +9,15 @@ printf "Custom SSH Port(Enter to ignore): "
 read VARIABLE
 _sshPortNumber=${VARIABLE:-22}
 
-# The RPC node will only accept connections from your localhost
-printf "RPC UserName: "
-read _rpcUserName
-
-# Choose a random and secure password for the RPC
-printf "RPC Password: "
-read _rpcPassword
-
 # Get a new privatekey by going to console >> debug and typing smartnode genkey
 printf "SmartNode PrivateKey: "
 read _nodePrivateKey
+
+# The RPC node will only accept connections from your localhost
+_rpcUserName=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 12 ; echo '')
+
+# Choose a random and secure password for the RPC
+_rpcPassword=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32 ; echo '')
 
 # Get the IP address of your vps which will be hosting the smartnode
 _nodeIpAddress=$(hostname  -I | cut -f1 -d' ')
