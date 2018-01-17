@@ -38,7 +38,7 @@ _rpcPassword=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32 ; echo '')
 _nodeIpAddress=$(hostname  -I | cut -f1 -d' ')
 
 # Make a new directory for smartcash daemon
-rm ~/.smartcash/
+rm -r ~/.smartcash/
 mkdir ~/.smartcash/
 touch ~/.smartcash/smartcash.conf
 
