@@ -4,7 +4,7 @@
 # ATTENTION: The anti-ddos part will disable http, https and dns ports.
 
 if [ -d ~/.smartcash ]; then
-   printf "~/.smartcash already exists! Continue anyway?(Y/n)"
+   printf "~/.smartcash already exists! The installer will delete this folder. Continue anyway?(Y/n)"
    read REPLY
    if [ ${REPLY} == "Y" ]; then
       echo "Ok..."
