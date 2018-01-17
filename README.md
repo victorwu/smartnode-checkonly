@@ -9,7 +9,7 @@
 
 #### Login to your vps, donwload the install.sh file and then run it:
 ```
-wget https://raw.githubusercontent.com/msg768/smartnode/master/install.sh
+wget https://raw.githubusercontent.com/SmartCash/smartnode/master/install.sh
 bash ./install.sh
 ```
 
