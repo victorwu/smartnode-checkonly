@@ -62,6 +62,7 @@ smartnodeprivkey=${_nodePrivateKey}
 cd
 
 # Install smartcashd using apt-get
+apt-get install software-properties-common
 add-apt-repository ppa:smartcash/ppa -y && apt update && apt install smartcashd -y && smartcashd
 
 # Create a directory for smartnode's cronjobs and the anti-ddos script
