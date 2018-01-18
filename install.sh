@@ -91,7 +91,7 @@ chmod 0700 ./checkdaemon.sh
 chmod 0700 ./upgrade.sh
 
 # Change the SSH port
-sed -i 's/[#]\{0,1\}[ ]\{0,1\}Port [0-9]\{2,\}/Port ${_sshPortNumber}/g' /etc/ssh/sshd_config
+sed -i "s/[#]\{0,1\}[ ]\{0,1\}Port [0-9]\{2,\}/Port ${_sshPortNumber}/g" /etc/ssh/sshd_config
 sed -i "s/14855/${_sshPortNumber}/g" ~/smartnode/anti-ddos.sh
 
 # Run the anti-ddos script
