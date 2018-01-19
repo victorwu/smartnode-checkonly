@@ -62,6 +62,7 @@ smartnodeprivkey=${_nodePrivateKey}
 cd
 
 # Install smartcashd using apt-get
+apt-get update
 apt-get install software-properties-common
 add-apt-repository ppa:smartcash/ppa -y && apt update && apt install smartcashd -y && smartcashd
 
