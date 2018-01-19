@@ -35,7 +35,7 @@ _rpcUserName=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 12 ; echo '')
 _rpcPassword=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32 ; echo '')
 
 # Get the IP address of your vps which will be hosting the smartnode
-_nodeIpAddress=$(hostname  -I | cut -f1 -d' ')
+_nodeIpAddress=$(ip route get 1 | awk '{print $NF;exit}')
 
 # Make a new directory for smartcash daemon
 rm -r ~/.smartcash/
