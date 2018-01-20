@@ -17,6 +17,8 @@ while true; do
         exit
       fi
    fi
+ else
+   break
  fi
 done
 
