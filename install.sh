@@ -4,7 +4,7 @@
 # ATTENTION: The anti-ddos part will disable http, https and dns ports.
 
 while true; do
- if [ -d ~/.bitcoin ]; then
+ if [ -d ~/.smartcash ]; then
     printf "~/.smartcash/ already exists! The installer will delete this folder. Continue anyway?(Y/n)"
    read REPLY
    if [ ${REPLY} == "Y" ]; then
@@ -19,7 +19,6 @@ while true; do
    fi
  fi
 done
-
 
 # Warning that the script will reboot the server
 echo "WARNING: This script will reboot the server when it's finished."
