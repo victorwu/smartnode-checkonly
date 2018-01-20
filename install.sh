@@ -8,7 +8,7 @@ while true; do
    printf "~/.smartcash/ already exists! The installer will delete this folder. Continue anyway?(Y/n)"
    read REPLY
    if [ ${REPLY} == "Y" ]; then
-      pID=$(ps -A | grep smartcashd | cut -f2 -d' ')
+      pID=$(ps -ef | grep smartcashd | awk '{print $2}')
       kill ${pID}
       rm -r ~/.smartcash/
       break
