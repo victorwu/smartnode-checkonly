@@ -3,15 +3,23 @@
 # Installs smartnode on Ubuntu 17.10 x64
 # ATTENTION: The anti-ddos part will disable http, https and dns ports.
 
-if [ -d ~/.smartcash ]; then
-   printf "~/.smartcash already exists! The installer will delete this folder. Continue anyway?(Y/n)"
+while true; do
+ if [ -d ~/.bitcoin ]; then
+    printf "~/.smartcash/ already exists! The installer will delete this folder. Continue anyway?(Y/n)"
    read REPLY
    if [ ${REPLY} == "Y" ]; then
-      echo "Ok..."
+      pID=$(ps -A | grep smartcashd | cut -f2 -d' ')
+      kill ${pID}
+      rm -r ~/.smartcash/
+      break
    else
-      exit
+      if [ ${REPLY} == "n" ]; then
+        exit
+      fi
    fi
-fi
+ fi
+done
+
 
 # Warning that the script will reboot the server
 echo "WARNING: This script will reboot the server when it's finished."
@@ -38,7 +46,6 @@ _rpcPassword=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32 ; echo '')
 _nodeIpAddress=$(ip route get 1 | awk '{print $NF;exit}')
 
 # Make a new directory for smartcash daemon
-rm -r ~/.smartcash/
 mkdir ~/.smartcash/
 touch ~/.smartcash/smartcash.conf
 
