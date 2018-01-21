@@ -7,15 +7,15 @@
 2. Make sure the daemon is never stuck: *checkdaemon.sh*
 3. Make sure smartcash is always up-to-date: *upgrade.sh*
 
-#### Login to your vps, donwload the install.sh file and then run it:
+#### Login to your vps as root, donwload the install.sh file and then run it:
 ```
-wget https://raw.githubusercontent.com/SmartCash/smartnode/master/install.sh
+wget https://rawgit.com/smartcash/smartnode/master/install.sh
 bash ./install.sh
 ```
 
 #### On the client-side, add the following line to smartnode.conf:
 ```
-node-alias vps-ip-address:9678	node-privatekey collateral-txid collateral-vout
+node-alias vps-ip:9678	node-key collateral-txid vout
 ```
 
 #### Run the qt wallet, go to SmartNodes tab, choose your node and click "start alias" at the bottom.
