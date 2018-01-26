@@ -3,8 +3,8 @@
 # Checks smartnode on Ubuntu 17.10 x64
 # ATTENTION: The anti-ddos part will disable http, https and dns ports.
 
-if [ "$(whoami)" != "root" ]; then
-  echo "Script must be run as user: root"
+if [ "$(whoami)" == "root" ]; then
+  echo "Script must be run as user: smartadmin or ID you setup for smartcash"
   exit -1
 fi
 
@@ -54,7 +54,7 @@ chmod 0700 ./clearlog.sh
 # sed -i "s/14855/${_sshPortNumber}/g" ~/smartnode/anti-ddos.sh
 
 # Run the anti-ddos script
-sudo - bash ./anti-ddos.sh
+sudo bash ./anti-ddos.sh
 
 # Reboot the server
 reboot
