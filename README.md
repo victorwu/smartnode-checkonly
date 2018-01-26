@@ -10,10 +10,14 @@
 3. Make sure smartcash is always up-to-date: `upgrade.sh`
 4. Clear the log file every other day: `clearlog.sh`
 
-#### Login to your vps as smartadmin, donwload the install.sh file and then run it:
+#### And an anti-ddos script
+5. disable all ports including the http, https and dns ports: `anti-ddos.sh`
+
+#### Login to your vps as root, donwload the install.sh file and then run it:
 ```
 wget https://rawgit.com/controllinghand/smartnode-checkonly/master/install.sh
 bash ./install.sh
 ```
+### At the end of the install your server will reboot so that the anti-ddos and cron jobs will take effect
 
 #### You're good to go now. BEE $SMART! https://smartcash.cc
