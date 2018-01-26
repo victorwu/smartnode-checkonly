@@ -54,7 +54,7 @@ chmod 0700 ./clearlog.sh
 # sed -i "s/14855/${_sshPortNumber}/g" ~/smartnode/anti-ddos.sh
 
 # Run the anti-ddos script
-bash ./anti-ddos.sh
+sudo - bash ./anti-ddos.sh
 
 # Reboot the server
 reboot
