@@ -27,8 +27,8 @@ mkdir smartnode
 cd ~/smartnode/
 
 # Download the appropriate scripts
-wget https://github.com/controllinghand/smartnode-checkonly/master/anti-ddos.sh
-wget https://github.com/controllinghand/smartnode-checkonly/master/makerun.sh
+wget https://rawgit.com/controllinghand/smartnode-checkonly/master/anti-ddos.sh
+wget https://rawgit.com/controllinghand/smartnode-checkonly/master/makerun.sh
 wget https://github.com/controllinghand/smartnode-checkonly/master/checkdaemon.sh
 wget https://github.com/controllinghand/smartnode-checkonly/master/upgrade.sh
 wget https://github.com/controllinghand/smartnode-checkonly/master/clearlog.sh
