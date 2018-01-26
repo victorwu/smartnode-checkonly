@@ -15,7 +15,7 @@
 #### And an anti-ddos script
 5. Disable all ports including the http, https and dns ports: `anti-ddos.sh`
 
-#### Login to your vps as root, donwload the install.sh file and then run it:
+#### Login to your vps as smartadmin or ID you used to run smartcashd, donwload the install.sh file and then run it:
 ```
 wget https://rawgit.com/controllinghand/smartnode-checkonly/master/install.sh
 bash ./install.sh
