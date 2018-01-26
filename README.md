@@ -11,7 +11,7 @@
 4. Clear the log file every other day: `clearlog.sh`
 
 #### And an anti-ddos script
-5. disable all ports including the http, https and dns ports: `anti-ddos.sh`
+5. Disable all ports including the http, https and dns ports: `anti-ddos.sh`
 
 #### Login to your vps as root, donwload the install.sh file and then run it:
 ```
