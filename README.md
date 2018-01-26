@@ -2,7 +2,7 @@
 ### Bash Checker for smartnode on Ubuntu 16.04 LTS x64
 ### ATTENTION: This installer is only suitable for a dedicated vps. The anti-ddos script in this installer will disable all ports including the http, https and dns ports.
 ### This is from the great work of https://forum.smartcash.cc/u/msg768
-### This script Assumes you already have a Smartnode installed.  If you need to install a new Smartnode you may want to use the installer script provided by @msg786 https://github.com/SmartCash/smartnode or you can follow my guide at https://forum.smartcash.cc/t/smartcash-smartnode-setup-guide-v1-1-for-mac-users/2900
+### This script Assumes you already have a Smartnode installed.  If you need to install a new Smartnode you may want to use the installer script provided by @msg786 https://github.com/SmartCash/smartnode or you can follow my guide at https://forum.smartcash.cc/t/smartcash-smartnode-setup-guide-v1-2-for-mac-users-including-smartnode-checking-and-anti-ddos/2900
 
 ### You must run this script as smartadmin or ID you used to run smartcashd at the end of the script you will be asked for a sudo password to run the anti-ddos script and reboot command
 
