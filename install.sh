@@ -53,8 +53,8 @@ chmod 0700 ./clearlog.sh
 # sed -i "s/[#]\{0,1\}[ ]\{0,1\}Port [0-9]\{2,\}/Port ${_sshPortNumber}/g" /etc/ssh/sshd_config
 # sed -i "s/14855/${_sshPortNumber}/g" ~/smartnode/anti-ddos.sh
 
-# Run the anti-ddos script
+# Run the anti-ddos script You will need to put in your sudo password
 sudo bash ./anti-ddos.sh
 
 # Reboot the server
-reboot
+sudo reboot
