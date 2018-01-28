@@ -58,4 +58,7 @@ chmod 0700 ./clearlog.sh
 sudo bash ./anti-ddos.sh
 
 # Reboot the server
+echo "Rebooting the server so that changes will take effect."
+printf "Enter to continue: "
+read IGNORE
 sudo reboot
