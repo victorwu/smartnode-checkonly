@@ -11,5 +11,6 @@ smartcash-cli getblockcount > ~/smartnode/blockcount
 
 if [ "$previousBlock" == "$currentBlock" ]; then
   smartcash-cli stop
+  sleep 10
   smartcashd
 fi
