@@ -34,7 +34,8 @@ wget https://rawgit.com/controllinghand/smartnode-checkonly/master/upgrade.sh
 wget https://rawgit.com/controllinghand/smartnode-checkonly/master/clearlog.sh
 
 # Create a cronjob for making sure smartcashd is always running
-(crontab -l ; echo "*/1 * * * * ~/smartnode/makerun.sh") | crontab -
+# SLG changed to every 10 mins to help keep it from stepping on setting up nodes and upgrades etc
+(crontab -l ; echo "*/10 * * * * ~/smartnode/makerun.sh") | crontab -
 chmod 0700 ./makerun.sh
 
 # Create a cronjob for making sure the daemon is never stuck
