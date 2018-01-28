@@ -94,19 +94,29 @@ wget https://raw.githubusercontent.com/SmartCash/smartnode/master/upgrade.sh
 wget https://raw.githubusercontent.com/SmartCash/smartnode/master/clearlog.sh
 
 # Create a cronjob for making sure smartcashd is always running
-(crontab -l ; echo "*/1 * * * * ~/smartnode/makerun.sh") | crontab -
-chmod 0700 ./makerun.sh
+if ! crontab -l | grep "~/smartnode/makerun.sh"; then
+  (crontab -l ; echo "*/1 * * * * ~/smartnode/makerun.sh") | crontab -
+fi
 
 # Create a cronjob for making sure the daemon is never stuck
-(crontab -l ; echo "*/30 * * * * ~/smartnode/checkdaemon.sh") | crontab -
-chmod 0700 ./checkdaemon.sh
+if ! crontab -l | grep "~/smartnode/checkdaemon.sh"; then
+  (crontab -l ; echo "*/30 * * * * ~/smartnode/checkdaemon.sh") | crontab -
+fi
 
 # Create a cronjob for making sure smartcashd is always up-to-date
-(crontab -l ; echo "*/120 * * * * ~/smartnode/upgrade.sh") | crontab -
-chmod 0700 ./upgrade.sh
+if ! crontab -l | grep "~/smartnode/upgrade.sh"; then
+  (crontab -l ; echo "*/120 * * * * ~/smartnode/upgrade.sh") | crontab -
+fi
 
 # Create a cronjob for clearing the log file
-(crontab -l ; echo "0 0 */2 * * ~/smartnode/clearlog.sh") | crontab -
+if ! crontab -l | grep "~/smartnode/clearlog.sh"; then
+  (crontab -l ; echo "0 0 */2 * * ~/smartnode/clearlog.sh") | crontab -
+fi
+
+# Give execute permission to the cron scripts
+chmod 0700 ./makerun.sh
+chmod 0700 ./checkdaemon.sh
+chmod 0700 ./upgrade.sh
 chmod 0700 ./clearlog.sh
 
 # Change the SSH port
