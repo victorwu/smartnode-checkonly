@@ -34,7 +34,7 @@ wget https://raw.githubusercontent.com/SmartCash/smartnode/master/upgrade.sh
 wget https://raw.githubusercontent.com/SmartCash/smartnode/master/clearlog.sh
 
 # Create a cronjob for making sure smartcashd is always running
-# SLG changed to every 10 mins to help keep it from stepping on setting up nodes and upgrades etc
+# SLG changed to every 1 mins to help keep it from stepping on setting up nodes and upgrades etc
 (crontab -l ; echo "*/1 * * * * ~/smartnode/makerun.sh") | crontab -
 chmod 0700 ./makerun.sh
 
